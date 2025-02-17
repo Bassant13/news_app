@@ -80,6 +80,7 @@ class CategoryItem extends StatelessWidget {
                        style: Theme.of(context).textTheme.labelLarge,
                     ),
                     SizedBox(height: height * 0.04),
+<<<<<<< HEAD
                     Container(
                       width: width * 0.40,
                       height: height * 0.06,
@@ -109,6 +110,40 @@ class CategoryItem extends StatelessWidget {
                             ),
                           )
                         ],
+=======
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Container(
+                        width: width * 0.50,
+                        height: height * 0.06,
+                        decoration: BoxDecoration(
+                          color: AppColors.greyColor,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: Row(
+                          textDirection: index % 2 == 0 ? TextDirection.ltr : TextDirection.rtl,
+                          children: [
+                            Spacer(),
+                            Text(
+                              AppLocalizations.of(context)!.view_all,
+                                style: Theme.of(context).textTheme.bodyLarge,
+                            ),
+                            const Spacer(),
+                            CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                              child: Icon(
+                               index % 2 == 0 && languageProvider.currentLocale == 'en'
+                                   || index % 2 != 0 && languageProvider.currentLocale == 'ar'
+                                    ? Icons.arrow_forward_ios_rounded
+                                    : Icons.arrow_back_ios_rounded,
+
+                                 color: Theme.of(context).indicatorColor,
+                              ),
+                            )
+                          ],
+                        ),
+>>>>>>> 532579f (+ bottom sheet)
                       ),
                     )
                   ],

@@ -5,6 +5,7 @@ import 'package:news_app_c13/core/app_colors.dart';
 import 'package:news_app_c13/l10n/translation.dart';
 import 'package:news_app_c13/providers/language_provider.dart';
 import 'package:news_app_c13/providers/theme_provider.dart';
+import 'package:news_app_c13/ui/screens/categories_screen.dart';
 import 'package:news_app_c13/ui/widgets/custom_dropdown_button.dart';
 import 'package:news_app_c13/ui/widgets/text_with_left_icon.dart';
 import 'package:provider/provider.dart';
@@ -43,7 +44,11 @@ class _CustomDrawerState extends State<CustomDrawer> {
            ),
           InkWell(
             onTap: (){
+<<<<<<< HEAD
            //   Navigator.pushNamed(context, HomeScreen.routeName);
+=======
+              Navigator.pushNamed(context, CategoriesScreen.routeName);
+>>>>>>> 532579f (+ bottom sheet)
             },
             child: TextWithLeftIcon(
               iconName: Icons.home_filled,
