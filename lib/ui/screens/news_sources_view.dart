@@ -5,8 +5,8 @@ import '../../data/models/source_response/Source.dart';
 import '../widgets/news_list_view.dart';
 
 class NewsSourcesView extends StatefulWidget{
-  List<Source> sources;
-   NewsSourcesView(this.sources,{super.key});
+ final List<Source> sources;
+  const NewsSourcesView(this.sources,{super.key});
 
   @override
   State<NewsSourcesView> createState() => _NewsSourcesViewState();
@@ -17,31 +17,12 @@ var currentIndex = 0;
 class _NewsSourcesViewState extends State<NewsSourcesView> {
   @override
   Widget build(BuildContext context) {
-    @override
-    void initState() {
-      super.initState();
 
-    //  _tabController = TabController(length: widget.sources.length, vsync: this);
-
-      //   _tabController.addListener(() {
-      //     // if (!_tabController.indexIsChanging) {
-      //     //   _fetchNewsForCurrentTab();
-      //     //   setState(() {
-      //     //   });
-      //     // }
-      //   });
-      //
-      //   _fetchNewsForCurrentTab();
-      //   setState(() {
-      //   });
-      // }
-    }
     return DefaultTabController(
       length: widget.sources.length,
       child: Column(
         children: [
           TabBar(
-          //  controller: _tabController,
             isScrollable: true,
             tabs: buildTabs(widget.sources),
             onTap: (index) {

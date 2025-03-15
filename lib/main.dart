@@ -4,8 +4,6 @@ import 'package:news_app_c13/providers/language_provider.dart';
 import 'package:news_app_c13/providers/theme_provider.dart';
 import 'package:news_app_c13/ui/screens/categories_screen.dart';
 import 'package:news_app_c13/ui/screens/home_screen.dart';
-import 'package:news_app_c13/ui/screens/news_details.dart';
-import 'package:news_app_c13/ui/widgets/news_item.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -36,10 +34,8 @@ class MainApp extends StatelessWidget {
       routes: {
         CategoriesScreen.routeName: (context) => const CategoriesScreen(),
         HomeScreen.routeName: (context) =>  HomeScreen(),
-<<<<<<< HEAD
-=======
 
->>>>>>> 532579f (+ bottom sheet)
+
       },
       initialRoute: CategoriesScreen.routeName,
     );

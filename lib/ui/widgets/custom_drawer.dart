@@ -44,11 +44,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
            ),
           InkWell(
             onTap: (){
-<<<<<<< HEAD
-           //   Navigator.pushNamed(context, HomeScreen.routeName);
-=======
               Navigator.pushNamed(context, CategoriesScreen.routeName);
->>>>>>> 532579f (+ bottom sheet)
             },
             child: TextWithLeftIcon(
               iconName: Icons.home_filled,
@@ -63,8 +59,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
           ),
         CustomDropdownButton(
           list: themeList,
-          selectedItem: themeProvider.currentTheme == ThemeMode.light? getTranslations(context)!.light
-          : getTranslations(context)!.dark,
+          selectedItem: themeProvider.currentTheme == ThemeMode.light? getTranslations(context).light
+          : getTranslations(context).dark,
           onChange: (newTheme) {
             if(newTheme == 'Light' || newTheme == 'الوضع الفاتح') {
               themeProvider.changeTheme(ThemeMode.light,newTheme!);
